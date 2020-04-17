@@ -56,11 +56,18 @@ for t in tokens:
         G.add_edge(log[log_size-2], node_name)
     if len(split) > 1:
         print(">> LOG BEFORE: ", log)
-        # log = log[:len(split)+1]
         del log[log_size-len(split):log_size]
         print(">> LOG AFTER: ", log)
 
     first_node = False
+
+#### CODE TO REMOVE UNK NODES ####
+# for i in range(0,nodes['UNK']+1):
+#     node_unk = 'UNK-'+str(i)
+#     edges = G.edges([node_unk]) 
+#     edges = list(edges)
+#     G.add_edge(edges[0][1],edges[1][1])
+#     G.remove_node('UNK-'+str(i))
 
 pos=graphviz_layout(G, prog='dot')
 nx.draw(G, pos, with_labels=True, font_weight='bold')
