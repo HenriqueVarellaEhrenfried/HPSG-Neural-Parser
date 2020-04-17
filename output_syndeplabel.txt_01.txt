@@ -1,0 +1,1 @@
+['nn', 'nsubj', 'cop', 'det', 'root', 'prep', 'det', 'amod', 'pobj', 'prep', 'amod', 'pobj', 'cc', 'conj', 'punct', 'cc', 'nsubj', 'cop', 'det', 'amod', 'conj', 'prep', 'poss', 'amod', 'amod', 'pobj', 'punct', 'det', 'amod', 'appos', 'punct']
