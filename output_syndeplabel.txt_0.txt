@@ -1,1 +1,1 @@
-['nsubj', 'root', 'aux', 'xcomp', 'dobj', 'prep', 'dep']
+['nsubj', 'root', 'aux', 'xcomp', 'dobj', 'prep', 'cc', 'aux', 'nsubj', 'parataxis', 'det', 'dobj', 'prep', 'punct']

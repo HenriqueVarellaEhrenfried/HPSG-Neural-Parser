@@ -1,1 +1,1 @@
-(S (NP (UNK I)) (VP (UNK like) (S (VP (UNK to) (VP (UNK eat) (NP (UNK pizza)) (PP (UNK with) (PP (UNK with))))))))
+(S (S (NP (UNK I)) (VP (UNK like) (S (VP (UNK to) (VP (UNK eat) (NP (UNK pizza)) (PP (UNK with))))))) (UNK you.) (SQ (UNK Would) (NP (UNK you)) (VP (UNK share) (NP (UNK a) (UNK slice)) (PP (UNK with)))) (UNK me?))
