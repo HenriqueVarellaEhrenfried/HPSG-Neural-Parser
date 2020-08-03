@@ -32,9 +32,9 @@ def create_ohsumed():
                 CMD = "python src_joint/main.py parse --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt "
 
                 CMD = CMD + "--input-path " + INPUT_PATH + _file + " "
-                CMD = CMD + "--output-path-synconst " + OUTPUT + _type + _type[:-1] + '_' + _file + '_CLASS_' + _class[1:] + '_synconst' + " "
-                CMD = CMD + "--output-path-syndep " + OUTPUT + _type + _type[:-1] + '_' + _file + '_CLASS_' + _class[1:] + '_syndep' + " "
-                CMD = CMD + "--output-path-synlabel " + OUTPUT + _type + _type[:-1] + '_' + _file + '_CLASS_' + _class[1:] + '_synlabel'
+                CMD = CMD + "--output-path-synconst " + OUTPUT + _type + _type[:-1] + '_' + _file + '_CLASS_' + _class[1:] + '_synconst.txt' + " "
+                CMD = CMD + "--output-path-syndep " + OUTPUT + _type + _type[:-1] + '_' + _file + '_CLASS_' + _class[1:] + '_syndep.txt' + " "
+                CMD = CMD + "--output-path-synlabel " + OUTPUT + _type + _type[:-1] + '_' + _file + '_CLASS_' + _class[1:] + '_synlabel.txt'
                 command_list.append(CMD)
  
     return command_list
@@ -46,6 +46,7 @@ print("Command list created. There are", len_commnads, "commands to run")
 i = 1
 for command in commands:
     print("\t>> Running", str(i), "/", len_commnads)
+    # Remove \n \r from the file before run;
     os.system(command)
 
 print("------------ Finished Processing ------------")
