@@ -1,4 +1,15 @@
 python src_joint/main.py parse --model-path-base ./models/joint_xlnet_dev=96.03_devuas=96.96_devlas=95.32.pt --input-path ./input.txt  --output-path-synconst output_synconst.txt --output-path-syndep output_syndephead.txt --output-path-synlabel output_syndeplabel.txt 
 
 
-python src_joint/main.py parse --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt --input-path ./input.txt  --output-path-synconst output_synconst.txt --output-path-syndep output_syndephead.txt --output-path-synlabel output_syndeplabel.txt 
+python src_joint/main.py parse --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt --input-path ./input.txt  --output-path-synconst output_synconst.txt --output-path-syndep output_syndephead.txt --output-path-synlabel output_syndeplabel.txt
+
+
+python src_joint/main.py parse 
+    --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt 
+    --input-path ./input.txt  
+    --output-path-synconst output_synconst.txt 
+    --output-path-syndep output_syndephead.txt 
+    --output-path-synlabel output_syndeplabel.txt
+
+
+    python src_joint/main.py parse --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt --input-path ./input.txt --output-path-synconst ./Output/input_synconst --output-path-syndep ./Output/input_syndep --output-path-synlabel ./Output/input_synlabel
