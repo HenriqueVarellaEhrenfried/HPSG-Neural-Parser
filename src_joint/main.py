@@ -4,6 +4,9 @@ import os.path
 import time
 import uuid
 
+from os import listdir
+from os.path import isfile, join
+
 import torch
 import torch.optim.lr_scheduler
 
@@ -737,9 +740,30 @@ def main():
     subparser.add_argument("--output-path-syndep", type=str, default="-")
     subparser.add_argument("--output-path-synlabel", type=str, default="-")
     subparser.add_argument("--eval-batch-size", type=int, default=50)
+    subparser.add_argument("--is_dir", type=bool, default=False)
 
     args = parser.parse_args()
-    args.callback(args)
+    
+    if args.is_dir:
+        onlyfiles = [f for f in listdir(args.input_path) if isfile(join(args.input_path, f))]
+        size = len(onlyfiles)
+        dir_path = args.input_path
+
+        out_dep = args.output_path_syndep
+        out_const = args.output_path_synconst
+        out_label = args.output_path_synlabel
+
+        contador = 1
+        for files in onlyfiles:
+            print("\n\n>>>> Arquivo ", contador, "de", size)
+            args.input_path = dir_path + "/" + files
+            args.output_path_synconst = out_const + "_" + files
+            args.output_path_synlabel = out_label + "_" + files
+            args.output_path_syndep = out_dep + "_" + files
+            args.callback(args)
+            contador = contador + 1
+    else:
+        args.callback(args)
 
 # %%
 if __name__ == "__main__":

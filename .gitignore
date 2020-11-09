@@ -8,3 +8,5 @@ src*/*/__pycache__/
 tmp*
 PreProcess/Output/
 env/
+EVALB/evalb 
+data/glove*

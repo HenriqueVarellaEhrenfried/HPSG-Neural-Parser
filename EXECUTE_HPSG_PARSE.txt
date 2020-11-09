@@ -12,4 +12,14 @@ python src_joint/main.py parse
     --output-path-synlabel output_syndeplabel.txt
 
 
-    python src_joint/main.py parse --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt --input-path ./input.txt --output-path-synconst ./Output/input_synconst --output-path-syndep ./Output/input_syndep --output-path-synlabel ./Output/input_synlabel
+python src_joint/main.py parse --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt --input-path ./input.txt --output-path-synconst ./Output/input_synconst --output-path-syndep ./Output/input_syndep --output-path-synlabel ./Output/input_synlabel
+
+
+
+python src_joint/main.py parse \
+    --model-path-base ./models/joint_bert_dev=95.55_devuas=96.67_devlas=94.86.pt \
+    --input-path /home/hvehrenfried/Documentos/PhD/HPSG-Neural-Parser/PreProcess/Output/R8-test \
+    --output-path-synconst /home/hvehrenfried/Documentos/PhD/HPSG-Neural-Parser/Output/R8/test/input_synconst \
+    --output-path-syndep /home/hvehrenfried/Documentos/PhD/HPSG-Neural-Parser/Output/R8/test/input_syndep \
+    --output-path-synlabel /home/hvehrenfried/Documentos/PhD/HPSG-Neural-Parser/Output/R8/test/input_synlabel \
+    --is_dir=True
